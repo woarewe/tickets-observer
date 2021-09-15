@@ -3,7 +3,7 @@
 module Web
   class App < Hanami::API
     get "/" do
-      "Hello world!"
+      ENV.fetch("PORT", 3000)
     end
   end
 end
