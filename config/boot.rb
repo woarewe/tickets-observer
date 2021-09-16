@@ -1,4 +1,7 @@
 require "bundler/setup"
+require "dotenv"
+
+Dotenv.load
 
 ROOT = File.expand_path("..", __dir__)
 
@@ -7,8 +10,6 @@ Bundler.require(:default)
 require "sidekiq/web"
 require "securerandom"
 require "hanami/middleware/body_parser"
-
-Dotenv.load
 
 require_relative "sidekiq"
 

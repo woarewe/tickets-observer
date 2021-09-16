@@ -5,7 +5,7 @@ TELEGRAM_WEBHOOK = lambda do |env|
   token = params.fetch(:token)
   return [401, {}, []] if token != ENV.fetch("BOT_WEBHOOK_TOKEN")
 
-  [200, {},[params.inspect]]
+  raise "Error"
 end
 
 module Web
