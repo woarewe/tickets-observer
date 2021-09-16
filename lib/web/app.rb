@@ -5,7 +5,7 @@ TELEGRAM_WEBHOOK = lambda do |env|
   token = params.fetch(:token)
   return [401, {}, []] if token != ENV.fetch("BOT_WEBHOOK_TOKEN")
 
-  raise "Error"
+  raise HoneybadgerError.new("Just checking", params.except(:token))
 end
 
 module Web
