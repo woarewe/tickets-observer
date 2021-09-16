@@ -2,13 +2,13 @@ GEM
   remote: https://rubygems.org/
   specs:
     coderay (1.1.3)
+    connection_pool (2.2.5)
+    dotenv (2.7.6)
     faraday (1.3.0)
       faraday-net_http (~> 1.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
     faraday-net_http (1.0.1)
-    hanami-api (0.2.0)
-      hanami-router (~> 2.0.alpha)
     hanami-router (2.0.0.alpha5)
       mustermann (~> 1.0)
       mustermann-contrib (~> 1.0)
@@ -33,19 +33,26 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
+    redis (4.4.0)
     ruby2_keywords (0.0.4)
+    sidekiq (6.2.2)
+      connection_pool (>= 2.2.2)
+      rack (~> 2.0)
+      redis (>= 4.2.0)
     zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv (~> 2.7.6)
   faraday (~> 1.3.0)
-  hanami-api (~> 0.2.0)
+  hanami-router
   nokogiri (~> 1.12.4)
   pry (~> 0.14.0)
   puma (~> 5.4.0)
   rack (~> 2.2.3)
+  sidekiq (~> 6.2.2)
   zeitwerk (~> 2.4.2)
 
 RUBY VERSION
