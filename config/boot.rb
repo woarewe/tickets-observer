@@ -6,6 +6,7 @@ Bundler.require(:default)
 
 require "sidekiq/web"
 require "securerandom"
+require "hanami/middleware/body_parser"
 
 Dotenv.load
 
