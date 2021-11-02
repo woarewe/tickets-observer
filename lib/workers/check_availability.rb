@@ -5,7 +5,7 @@ module Workers
     include Sidekiq::Worker
 
     def perform(*)
-      result = Core::Tickets.available?(from: "Orša Centraĺnaja", to: "Minsk Pasažyrski", date: "2021-10-31", train: "865Б")
+      result = Core::Tickets.available?(from: "Orša Centraĺnaja", to: "Minsk Pasažyrski", date: "2021-11-07", train: "865Б")
       return unless result
 
       body = {
